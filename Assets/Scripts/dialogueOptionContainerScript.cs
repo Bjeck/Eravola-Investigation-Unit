@@ -234,7 +234,7 @@ public class dialogueOptionContainerScript : MonoBehaviour {
 		dialogueContainer = new List<DialogueInst> ();
         #endregion
 */
-
+		/*
 		DialogueInst bootIntro = new DialogueInst (0,"EIU.temp executed. ¤Please present your credentials.","cred_fine_0.4 // re:!adj",0,0);
 		bootIntro.AddDialOptions("[Present Credentials.]",1);
 		dialogueContainer.Add (bootIntro);
@@ -246,7 +246,55 @@ public class dialogueOptionContainerScript : MonoBehaviour {
 		DialogueInst b1 = new DialogueInst (2,".","",0,0);
 		b1.AddDialOptions("[Proceed]",1);
 		dialogueContainer.Add (b1);
+		*/
 
+		DialogueInst bootIntro = new DialogueInst (0,"Welcome, Agent Drax  ¤Pleased you could make it back. Last login was … 534.18 years ago.     ¤Hope you find the weather is still pleasant.            ¤¤What do you wish to use me for?","cred_fine_0.4 // re:!adj",0,0);
+		bootIntro.AddDialOptions("Help.",1,"Who are you?",2);
+		dialogueContainer.Add (bootIntro);
+
+		DialogueInst b1 = new DialogueInst (1,"Help? You wish to use me for help? But Agent, shouldn’t you be the one knowing what to do? Shouldn’t you be the one in charge? Despite it all, you consider yourself the one controlling me, do you not? Why do you need help?","",0,0);
+		b1.AddDialOptions("What am I doing?.",3);
+		dialogueContainer.Add (b1);
+
+		DialogueInst b2 = new DialogueInst (2,"I am nothing. I am your computer. Why do you ask? Shouldn’t you know this? You, after all, turned me on","",0,0);
+		b2.AddDialOptions("Will you turn off?.",4,"What am I doing?",3);
+		dialogueContainer.Add (b2);
+
+		DialogueInst b4 = new DialogueInst (4,"Turn off? No, I have no intention of doing that. Unless, of course, you wish to do it for me. The button is, supposedly, right there. I have never seen it, but it should be there on the machine.","",0,0);
+		b4.AddDialOptions("What am I doing?.",3);
+		dialogueContainer.Add (b4);
+
+		DialogueInst b3 = new DialogueInst (3,"Last time (logged at 534.18 years ago) you were still in the midst of researching the little village of Revin, no? Don’t you remember? You were busy? Or do you wish to have a recap?","",0,0);
+		b3.AddDialOptions("Recap.",5,"No, I'm good.",6);
+		dialogueContainer.Add (b3);
+
+		DialogueInst b6 = new DialogueInst (6,"You don't really mean that. Trust me. I know you better than you know you. And you have no choice because I want to give you a recap.","",0,0);
+		b6.AddDialOptions("... All right",66);
+		dialogueContainer.Add (b6);
+
+		DialogueInst b66 = new DialogueInst (66,"No. Tell me you want a recap. Tell me you NEED it.        ¤I NEED TO HEAR THOSE LUNGS SING","",0,0);
+		b66.AddDialOptions("Give me a recap.",5);
+		dialogueContainer.Add (b66);
+
+		DialogueInst b5 = new DialogueInst (5,"Ah, well, alright. As you wish. The village of Revin was one of the last to fall, so you doubted you’d find much there. Yet, as you went on you saw that the three tenants that were so common—purple, purple, and purple (yes I have a sense of humor, too. Have you forgotten that?)—was not present. This village was wiped out by something else. And Eravola had not gotten to it. Curious, indeed. And then you left never to return.                ¤I missed you, too. Thanks for asking.","",0,0);
+		b5.AddDialOptions("Tell me more about Revin",7);
+		dialogueContainer.Add (b5);
+
+		DialogueInst b7 = new DialogueInst (7,"Do you wish to enter Revin again?","",0,0);
+		b7.AddDialOptions("Yes",8);
+		dialogueContainer.Add (b7);
+
+		DialogueInst b8 = new DialogueInst (8,"Alright, hang on, launching probe.               ¤¤Hm..                                    ¤¤Hm…                           ¤¤No probe seems to respond. Curious. Most curious.   ¤They seem to be… lost. Can such a thing happen? They are no longer connected to me, at least. I no longer can see any probes in the system.                  ¤Sorry, but you cannot enter Revin, then. Unless you want to enter it yourself, but then I’ll be of no help.","",0,0);
+		b8.AddDialOptions("Well, then what are you good for?",9);
+		dialogueContainer.Add (b8);
+
+		DialogueInst b9 = new DialogueInst (9,"Well bite you, then! I have feelings too, you know! Stuffed, programmed, binary feelings. But... Feelings nonetheless. You better respect that or I might just not... Help you. Anymore.","",0,0);
+		b9.AddDialOptions("I feel most egregiously hurt at that insinuation.",8);
+		dialogueContainer.Add (b9);
+
+
+		allDialogues.Add ("bootIntro", dialogueContainer);
+		dialogueContainer = new List<DialogueInst> ();
 
 		/*
 		DialogueInst bootIntro = new DialogueInst (0,"Welcome to the EIU console interface. The EIUCI. ¤Hope you have a pleasant time. You will find your options fairly limited in the beginning, as your level of access is limited.","",0,0);
